@@ -109,6 +109,7 @@ var authenticationController = {
         // If we encounter this error, the duplicate key error,
         // this means that one of our fields marked as "unique"
         // failed to validate on this object.
+        // MongoDB specific code; verify if other database
         if(err.code === 11000){
           errorMessage = 'This user already exists.';
         }
